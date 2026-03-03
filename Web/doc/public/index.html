@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html test</title>
+  </head>
+  <body>
+    <header>
+      <nav class="nav" aria-label="Main Navigation">
+        <ul class="nav__list">
+          <li class="nav__item nav_item--active" aria-current="page">
+            <a href="./">Home</a>
+          </li>
+          <li class="nav__item"><a href="./about">About</a></li>
+          <li class="nav__item"><a href="./contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1 class="page-title"></h1>
+    <button onclick="history.back()">Previous Page</button>
+  </body>
+  <script>
+    const path = window.location.pathname;
+    console.log(path);
+    document.querySelector(".page-title").textContent =
+      `Welcome to ${path === "/" ? "Home" : path === "/about" ? "About" : "Contact"} Page`;
+  </script>
+</html>
