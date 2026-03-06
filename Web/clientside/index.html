@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My CV</title>
+
+    <style></style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/" onclick="navigate(event)">Home page</a></li>
+          <li><a href="/about" onclick="navigate(event)">About me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div id="main"></div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+      function navigate(event) {
+        event.preventDefault();
+        // Get the URL from the clicked link
+        const url = event.target.getAttribute("href");
+
+        // Push the new state to the history stack
+        history.pushState({ path: url }, "", url);
+
+        // Log where to navigate as indicated in your comment
+        // console.log("Navigating to:", url);
+
+        // // Render the content based on the path
+      }
+
+      // Handle the browser Back/Forward buttons
+      window.onpopstate = function (event) {
+        const path = window.location.pathname;
+        // renderContent(path);
+      };
+
+      // Simple function to update the DOM based on the route
+      function renderContent(path) {
+        const mainDiv = document.getElementById("main");
+        const newH1 = document.createElement("h1");
+        newH1.innerText = "Welcome to Home Page.";
+        if (path === "/about") {
+          newH1.innerText = "Welcome to About Page.";
+          mainDiv.append(newH1);
+        } else {
+          mainDiv.append(newH1);
+        }
+      }
+
+      // Initial render for the first page load
+      renderContent(window.location.pathname);
+    </script>
+  </body>
+</html>
