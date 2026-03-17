@@ -8,10 +8,11 @@ function removeEmail(email, arr) {
   if (index !== -1) {
     console.log(`Email ${email} removed successfully.`);
     arr.splice(index, 1);
-    return arr;
   } else {
     console.log(`Email ${email} not found in the list.`);
+
   }
+  return arr;
 }
 
 module.exports = {

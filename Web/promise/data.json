@@ -1,0 +1,17 @@
+{
+  "User1": {
+    "name": "John",
+    "age": 30,
+    "mail": "john@example.com"
+  },
+  "User2": {
+    "name": "Jane",
+    "age": 25,
+    "mail": "jane@example.com"
+  },
+  "User3": {
+    "name": "Doe",
+    "age": 35,
+    "mail": "doe@example.com"
+  }
+}
