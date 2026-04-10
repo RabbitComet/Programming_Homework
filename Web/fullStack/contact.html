@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="/" class="nav__item__link">Home</a></li>
+                <li class="nav__item"><a href="/contact" class="nav__item__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+      <form action="/submit" method="post" id="myForm" class="main__form">
+      <h1 class="form__title">Contact Us</h1>
+      <input type="text" name="name" placeholder="Name" required class="form__input"/>
+      <input type="email" name="email" placeholder="Email" required class="form__input"/>
+      <input type="tel" name="phone" placeholder="Phone Number" required class="form__input"/>
+      <button type="submit" class="form__button">Submit</button>
+    </main>
+    <footer></footer>
+    
+    </form>
+  </body>
+</html>
