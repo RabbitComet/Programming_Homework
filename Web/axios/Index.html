@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer
+    ></script>
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <header class="header">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="/" class="nav__item__link">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="/contact" class="nav__item__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <form action="/submit" method="post" id="myForm" class="main__form">
+        <h1 class="form__title">Register</h1>
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          required
+          class="form__input"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          class="form__input"
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+          class="form__input"
+        />
+        <button type="submit" class="form__button">Register</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
